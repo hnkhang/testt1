@@ -1,4 +1,122 @@
-    <!-- Bootstrap --> 
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Bunny restaurant</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
+        
+
+        <!--For Plugins external css-->
+        <link rel="stylesheet" href="assets/css/animate/animate.css" />
+        <link rel="stylesheet" href="assets/css/plugins.css" />
+
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="assets/css/responsive.css" />
+
+        <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <?php
+        session_start();
+        include_once("connection.php"); 
+        ?>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+       
+        
+		<div class='preloader'><div class='loaded'>&nbsp;</div></div>
+        <header id="home" class="navbar-fixed-top">
+            <div class="header_top_menu clearfix">	
+                <div class="container">
+                    <div class="row">	
+                        <div class="col-md-5 col-md-offset-3 col-sm-12 text-right">
+                            <div class="call_us_text">
+								<a href=""><i class="fa fa-clock-o"></i> We serve 24/7</a>
+								<a href=""><i class="fa fa-phone"></i>0342 552 442</a>
+							</div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-12">
+                            <div class="head_top_social text-right">
+                                <a href=""><i class="fa fa-facebook"></i></a>
+                                <a href=""><i class="fa fa-google-plus"></i></a>
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                                <a href=""><i class="fa fa-linkedin"></i></a>
+                                <a href=""><i class="fa fa-pinterest-p"></i></a>
+                                <a href=""><i class="fa fa-youtube"></i></a>
+                                <a href=""><i class="fa fa-phone"></i></a>
+                                <a href=""><i class="fa fa-camera"></i></a>
+                            </div>	
+                        </div>
+
+                    </div>			
+                </div>
+            </div>
+
+            <!-- End navbar-collapse-->
+
+            <div class="main_menu_bg">
+                <div class="container"> 
+                    <div class="row">
+                        <nav class="navbar navbar-default">
+                            <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand our_logo" href="?page=index"><img src="assets/images/logo.png" alt="" /></a>
+                                </div>
+
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="?page=index">Home</a></li>
+                                        <li><a href="?page=index#abouts">About us</a></li>
+                                        <?php
+                                        if(isset($_SESSION['us']) && $_SESSION['us']!=""){
+                                            if(isset($_SESSION['admin']) && $_SESSION['admin']==1){
+                                        ?>
+                                        <li><a href="?page=update_customer">Hi, <?php echo $_SESSION['us']?></a></li>
+                                        <li><a href="?page=logout">Log out</a></li>
+                                        <li><a href="?page=product_management">Product</a></li>
+                                        <li><a href="?page=category_management">Category</a></li>
+                                        <li><a href="?page=index#ourPakeg">Menu</a></li>      
+                                            <?php
+                                            }
+                                            else{
+                                            ?>  
+                                                <li><a href="?page=update_customer">Hi, <?php echo $_SESSION['us']?></a></li>
+                                                <li><a href="?page=logout">Log out</a></li>
+                                                <li><a href="?page=index#ourPakeg">Menu</a></li>
+                                                <li><a href="?page=feed_back">Feedback</a></li>
+                                                <li><a href="?page=booking" class="booking">Table Booking</a></li>                              
+                                        <?php 
+                                                }
+                                        }
+                                        else{
+                                        ?>
+                                        <li><a href="?page=login">Log in</a></li>
+                                        <li><a href="?page=register">Register</a></li>
+                                        <li><a href="?page=index#ourPakeg">Menu</a></li>
+                                        <?php
+                                            }
+                                        ?>
+<!-- Bootstrap --> 
     <link rel="stylesheet" type="text/css" href="style.css"/>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="css/bootstrap.min.css">
