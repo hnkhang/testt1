@@ -88,12 +88,11 @@
                                         <li><a href="?page=index">Home</a></li>
                                         <li><a href="?page=index#abouts">About us</a></li>
                                        
-                                        <li><a href="?page=update_customer">Hi, <?php echo $_SESSION['us']?></a></li>
-                                        <li><a href="?page=logout">Log out</a></li>
-                                        <li><a href="?page=product_management">Product</a></li>
-                                        <li><a href="?page=category_management">Category</a></li>
-                                        <li><a href="?page=index#ourPakeg">Menu</a></li>      
-                                           
+                                    
+                                        <li><a href="?page=login">Log in</a></li>
+                                        <li><a href="?page=register">Register</a></li>
+                                        <li><a href="?page=index#ourPakeg">Menu</a></li>
+                                        
 <!-- Bootstrap --> 
     <link rel="stylesheet" type="text/css" href="style.css"/>
 	<meta charset="utf-8" />
