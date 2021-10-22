@@ -87,35 +87,13 @@
                                     <ul class="nav navbar-nav navbar-right">
                                         <li><a href="?page=index">Home</a></li>
                                         <li><a href="?page=index#abouts">About us</a></li>
-                                        <?php
-                                        if(isset($_SESSION['us']) && $_SESSION['us']!=""){
-                                            if(isset($_SESSION['admin']) && $_SESSION['admin']==1){
-                                        ?>
+                                       
                                         <li><a href="?page=update_customer">Hi, <?php echo $_SESSION['us']?></a></li>
                                         <li><a href="?page=logout">Log out</a></li>
                                         <li><a href="?page=product_management">Product</a></li>
                                         <li><a href="?page=category_management">Category</a></li>
                                         <li><a href="?page=index#ourPakeg">Menu</a></li>      
-                                            <?php
-                                            }
-                                            else{
-                                            ?>  
-                                                <li><a href="?page=update_customer">Hi, <?php echo $_SESSION['us']?></a></li>
-                                                <li><a href="?page=logout">Log out</a></li>
-                                                <li><a href="?page=index#ourPakeg">Menu</a></li>
-                                                <li><a href="?page=feed_back">Feedback</a></li>
-                                                <li><a href="?page=booking" class="booking">Table Booking</a></li>                              
-                                        <?php 
-                                                }
-                                        }
-                                        else{
-                                        ?>
-                                        <li><a href="?page=login">Log in</a></li>
-                                        <li><a href="?page=register">Register</a></li>
-                                        <li><a href="?page=index#ourPakeg">Menu</a></li>
-                                        <?php
-                                            }
-                                        ?>
+                                           
 <!-- Bootstrap --> 
     <link rel="stylesheet" type="text/css" href="style.css"/>
 	<meta charset="utf-8" />
