@@ -24,10 +24,7 @@
 
         <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
-    <?php
-        session_start();
-        include_once("connection.php"); 
-        ?>
+    
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -65,33 +62,7 @@
 
             <!-- End navbar-collapse-->
 
-            <div class="main_menu_bg">
-                <div class="container"> 
-                    <div class="row">
-                        <nav class="navbar navbar-default">
-                            <div class="container-fluid">
-                                <!-- Brand and toggle get grouped for better mobile display -->
-                                <div class="navbar-header">
-                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-                                    <a class="navbar-brand our_logo" href="?page=index"><img src="assets/images/logo.png" alt="" /></a>
-                                </div>
-
-                                <!-- Collect the nav links, forms, and other content for toggling -->
-                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                                    <ul class="nav navbar-nav navbar-right">
-                                        <li><a href="?page=index">Home</a></li>
-                                        <li><a href="?page=index#abouts">About us</a></li>
-                                       
-                                    
-                                        <li><a href="?page=login">Log in</a></li>
-                                        <li><a href="?page=register">Register</a></li>
-                                        <li><a href="?page=index#ourPakeg">Menu</a></li>
+            
                                         
 <!-- Bootstrap --> 
     <link rel="stylesheet" type="text/css" href="style.css"/>
